@@ -22,6 +22,7 @@ public class User {
 	}
 	
 	public void isValidEmail() throws InvalidEmailException {
+<<<<<<< HEAD
 		String regex = "^[a-zA-Z0-9_+&*-]+(?:\\."+
                 "[a-zA-Z0-9_+&*-]+)*@" +
                 "(?:[a-zA-Z0-9-]+\\.)+[a-z" +
@@ -30,6 +31,11 @@ public class User {
 		Pattern pat = Pattern.compile(regex);
 		if (!pat.matcher(this.userEmail).matches())
 			throw new InvalidEmailException("Email khong hop le.");
+=======
+		String regex = "^[A-Za-z0-9+_.-]+@(.+)$";
+        	if (!Pattern.matches(regex, this.userEmail)) 
+        	throw new InvalidEmailException("Email khong hop le.");
+>>>>>>> 7444fa28e5b5f122ee6f5ffaca6b1dfd6867d970
 	}
 
 	public void input(Scanner sc) {
