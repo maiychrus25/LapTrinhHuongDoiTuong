@@ -22,11 +22,16 @@ public class User {
 	}
 	
 	public void isValidEmail() throws InvalidEmailException {
-		String regex = "^[A-Za-z0-9+_.-]+@(.+)$";
-        if (!Pattern.matches(regex, this.userEmail)) 
-        	throw new InvalidEmailException("Email khong hop le.");
+		String regex = "^[a-zA-Z0-9_+&*-]+(?:\\."+
+                "[a-zA-Z0-9_+&*-]+)*@" +
+                "(?:[a-zA-Z0-9-]+\\.)+[a-z" +
+                "A-Z]{2,7}$";
+	    
+		Pattern pat = Pattern.compile(regex);
+		if (!pat.matcher(this.userEmail).matches())
+			throw new InvalidEmailException("Email khong hop le.");
 	}
-	
+
 	public void input(Scanner sc) {
 		try {
 			System.out.print("Nhap ten nguoi dung: ");
