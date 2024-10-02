@@ -23,7 +23,7 @@ public class User {
 	
 	public void isValidEmail() throws InvalidEmailException {
 		String regex = "^[A-Za-z0-9+_.-]+@(.+)$";
-        if (!Pattern.matches(regex, this.userEmail)) 
+        	if (!Pattern.matches(regex, this.userEmail)) 
         	throw new InvalidEmailException("Email khong hop le.");
 	}
 	
