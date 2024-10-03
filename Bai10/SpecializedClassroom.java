@@ -10,7 +10,7 @@ public class SpecializedClassroom extends Classroom {
     @Override
     public void validateStudentCount() throws InvalidStudentCountException {
         if (this.studentCount < 20) {
-            throw new InvalidStudentCountException("Specialized class must have at least 20 students.");
+            throw new InvalidStudentCountException("Lop hoc chuyen sau can co tu 20 hoc sinh tro len.");
         }
     }
 }

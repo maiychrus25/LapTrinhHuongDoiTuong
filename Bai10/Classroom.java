@@ -16,25 +16,25 @@ public class Classroom {
     }
 
     public void input(Scanner sc) {
-        System.out.print("Enter class code: ");
+        System.out.print("Nhap ma lop: ");
         this.classCode = sc.nextLine();
 
-        System.out.print("Enter class name: ");
+        System.out.print("Nhap ten lop: ");
         this.className = sc.nextLine();
 
-        System.out.print("Enter student count: ");
+        System.out.print("Nhap so luong hoc sinh: ");
         this.studentCount = Integer.parseInt(sc.nextLine());
     }
 
     public void validateStudentCount() throws InvalidStudentCountException {
         if (this.studentCount <= 0) {
-            throw new InvalidStudentCountException("Student count must be greater than 0.");
+            throw new InvalidStudentCountException("So luong hoc sinh phai lon 0.");
         }
     }
 
     @Override
     public String toString() {
-        return "Class Code: " + this.classCode + "\nClass Name: " + this.className +
-               "\nStudent Count: " + this.studentCount;
+        return "Ma lop hoc: " + this.classCode + "\nTen lop hoc: " + this.className +
+               "\nSo luong hoc sinh: " + this.studentCount;
     }
 }
