@@ -22,12 +22,13 @@ public class User {
 	}
 	
 	public void isValidEmail() throws InvalidEmailException {
-		String regex = "^[a-zA-Z0-9_+&*-]+(?:\\."+
-                "[a-zA-Z0-9_+&*-]+)*@" +
-                "(?:[a-zA-Z0-9-]+\\.)+[a-z" +
-                "A-Z]{2,7}$";
-	    
+		// String regex = "^[a-zA-Z0-9_+&*-]+(?:\\."+
+  //               "[a-zA-Z0-9_+&*-]+)*@" +
+  //               "(?:[a-zA-Z0-9-]+\\.)+[a-z" +
+  //               "A-Z]{2,7}$";
+		String regex = "^[A-Za-z0-9]+[A-Za-z0-9]*@[A-Za-z0-9]+(\\.[A-Za-z0-9]+){1, 7}$";
 		Pattern pat = Pattern.compile(regex);
+		
 		if (!pat.matcher(this.userEmail).matches())
 			throw new InvalidEmailException("Email khong hop le.");
 	}
