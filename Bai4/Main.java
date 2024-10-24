@@ -1,3 +1,5 @@
+//Author: MAIY 07!!
+//Created: 29.09.2024
 package Bai4;
 
 import java.util.InputMismatchException;
