@@ -1,5 +1,10 @@
 //Author: MAIY 07!!
+<<<<<<< HEAD:BKTTH_01/Bai5/User.java
 package BKTTH_01.Bai5;
+=======
+//Created: 29.09.2024
+package Bai5;
+>>>>>>> b66927e00c624d9e9bcda4bbf71cb7ec11f24165:Bai5/User.java
 
 import java.util.Scanner;
 import java.util.regex.Pattern;
@@ -23,12 +28,13 @@ public class User {
 	}
 	
 	public void isValidEmail() throws InvalidEmailException {
-		String regex = "^[a-zA-Z0-9_+&*-]+(?:\\."+
-                "[a-zA-Z0-9_+&*-]+)*@" +
-                "(?:[a-zA-Z0-9-]+\\.)+[a-z" +
-                "A-Z]{2,7}$";
-	    
+		// String regex = "^[a-zA-Z0-9_+&*-]+(?:\\."+
+  //               "[a-zA-Z0-9_+&*-]+)*@" +
+  //               "(?:[a-zA-Z0-9-]+\\.)+[a-z" +
+  //               "A-Z]{2,7}$";
+		String regex = "^[A-Za-z0-9]+[A-Za-z0-9]*@[A-Za-z0-9]+(\\.[A-Za-z0-9]+){1, 7}$";
 		Pattern pat = Pattern.compile(regex);
+		
 		if (!pat.matcher(this.userEmail).matches())
 			throw new InvalidEmailException("Email khong hop le.");
 	}
