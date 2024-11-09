@@ -1,4 +1,4 @@
-// package BKTTH_02.Bai6;
+package BKTTH_02.Bai6;
 
 import java.util.Scanner;
 
