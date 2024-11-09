@@ -1,4 +1,7 @@
-// package BKTTH_02.Bai6;
+/**
+*    Author:  MAIY07!!
+*    Created: Oct 31, 2024 1:27:08 PM
+**/
 
 import java.util.Scanner;
 
